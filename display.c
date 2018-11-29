@@ -6,7 +6,7 @@
 /*   By: vde-sain <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/11/21 11:21:10 by vde-sain     #+#   ##    ##    #+#       */
-/*   Updated: 2018/11/28 16:00:04 by vde-sain    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/11/29 13:16:08 by vde-sain    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -30,6 +30,9 @@ void				display_text(t_map map, int *color)
 		100 * 20 + 175, 0x00FFFFF, "BG COLOR :      C");
 	mlx_string_put(map.mlx_ptr, map.win_ptr, SCREEN_X / 100 * 5, SCREEN_Y /
 		100 * 20 + 210, 0x00FFFFF, "FDF COLOR :     X");
+	mlx_string_put(map.mlx_ptr, map.win_ptr, SCREEN_X / 100 * 5, SCREEN_Y /
+		100 * 20 + 245, 0x00FFFFF, "FDF GRADIENT :  V");
+
 }
 
 char				*fill_img(char *str, int x, int y, int *colors)
