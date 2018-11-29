@@ -6,7 +6,7 @@
 /*   By: vde-sain <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/11/27 11:42:03 by vde-sain     #+#   ##    ##    #+#       */
-/*   Updated: 2018/11/28 16:25:22 by vde-sain    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/11/29 13:10:17 by vde-sain    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -51,6 +51,14 @@ int					key_press2(int keycode, t_map *map)
 		map->height += 0.5;
 	if (keycode == 121)
 		map->height -= 0.5;
+	if (keycode == 9)
+	{
+		if (map->shade == 0)
+			map->shade++;
+		else
+			map->shade--;
+		getting_map_on_screen(map);
+	}
 	if (verif_key(keycode) == 1)
 		getting_map_on_screen(map);
 	return (0);
@@ -70,6 +78,7 @@ int					key_press(int keycode, t_map *map)
 	}
 	if (keycode == 7)
 	{
+		map->shade = 0;
 		map->fdf_color++;
 		if (map->fdf_color >= 9)
 			map->fdf_color = 0;

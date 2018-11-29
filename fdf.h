@@ -6,7 +6,7 @@
 /*   By: vde-sain <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/11/27 15:42:17 by vde-sain     #+#   ##    ##    #+#       */
-/*   Updated: 2018/11/29 10:45:23 by vde-sain    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/11/29 13:02:07 by vde-sain    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -74,6 +74,7 @@ typedef struct			s_map
 	char				*pt_img;
 	int					color;
 	int					fdf_color;
+	int					shade;
 }						t_map;
 
 typedef struct			s_bresen
@@ -91,6 +92,7 @@ int						*orange_white_black(int *color, char *usage);
 char					*reset_screen(char *str, int usage, int check);
 int						*rainbow_colors_1(int *color, int usage);
 void					display_text(t_map map, int *color);
+int						*shading_colors(int *color, int altitude);
 
 void					getting_map_on_screen(t_map *map);
 int						**char_to_int(char **map_cont);

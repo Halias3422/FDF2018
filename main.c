@@ -6,7 +6,7 @@
 /*   By: vde-sain <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/11/22 12:47:59 by vde-sain     #+#   ##    ##    #+#       */
-/*   Updated: 2018/11/29 10:26:10 by vde-sain    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/11/29 13:02:02 by vde-sain    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -30,6 +30,7 @@ void			ft_init_map(t_map *map)
 	map->y_ratio = 40;
 	map->height = 3;
 	map->bigger_x = 0;
+	map->shade = 0;
 	map->x_ratio = determ_ratio(map->map_cont, "usage x", *map,
 			&(map->bigger_x));
 	map->y_ratio = determ_ratio(map->map_cont, "usage y", *map,

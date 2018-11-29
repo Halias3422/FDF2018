@@ -6,7 +6,7 @@
 #    By: vde-sain <marvin@le-101.fr>                +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2018/11/19 13:44:20 by vde-sain     #+#   ##    ##    #+#        #
-#    Updated: 2018/11/28 16:05:13 by vde-sain    ###    #+. /#+    ###.fr      #
+#    Updated: 2018/11/29 13:02:32 by vde-sain    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -19,7 +19,8 @@ SRC = main.c \
 	  colors.c \
 	  creating_map.c \
 	  finalizing_map.c \
-	  key_management.c
+	  key_management.c \
+	  shading_colors.c
 
 OBJ = $(SRC:.c=.o)
 

@@ -6,7 +6,7 @@
 /*   By: vde-sain <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/11/22 14:48:16 by vde-sain     #+#   ##    ##    #+#       */
-/*   Updated: 2018/11/28 15:57:09 by vde-sain    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/11/29 13:13:26 by vde-sain    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -127,17 +127,19 @@ void			getting_map_on_screen(t_map *map)
 	map->screen_y = SCREEN_Y / 100 * (30 - map->up);
 	if (!(color = (int*)malloc(sizeof(int) * 3)))
 		exit(-1);
-	color = rainbow_colors_1(color, map->fdf_color);
-	map->y = 0;
-	while (map->map_cont[map->y])
+	if (map->shade == 0)
+		color = rainbow_colors_1(color, map->fdf_color);
+	map->y = -1;
+	while (map->map_cont[++map->y])
 	{
-		map->x = 0;
-		while (map->map_cont[map->y][map->x])
+		map->x = -1;
+		while (map->map_cont[map->y][++map->x])
 		{
+			if (map->shade == 1)
+				color = shading_colors(color, ft_atoi(map->map_cont[map->y]
+					[map->x]) * map->height);
 			point_on_screen(map->map_cont, map->img_str, *map, color);
-			map->x++;
 		}
-		map->y++;
 	}
 	fill_image(map->img_str, color, SCREEN_X * 4);
 	mlx_put_image_to_window(map->mlx_ptr, map->win_ptr, map->pt_img, 0, 0);
