@@ -6,7 +6,7 @@
 #    By: vde-sain <marvin@le-101.fr>                +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2018/11/19 13:44:20 by vde-sain     #+#   ##    ##    #+#        #
-#    Updated: 2018/11/29 13:02:32 by vde-sain    ###    #+. /#+    ###.fr      #
+#    Updated: 2018/11/29 13:40:46 by vde-sain    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -26,7 +26,7 @@ OBJ = $(SRC:.c=.o)
 
 CC = gcc
 
-FLAGS = -g3 -Wall -Werror -Wextra
+FLAGS = -Wall -Werror -Wextra
 
 LIBFT = ./libft/
 
